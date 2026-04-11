@@ -102,6 +102,13 @@
       color: #777;
       margin-top: 10px;
     }
+    select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: white;
+}
 
     #successMsg {
       display: none;
@@ -151,8 +158,9 @@
       <div class="desc">
         <b>A Book Every Parent Should See!</b><br><br>
 
-        Improve your child’s learning, creativity, and confidence:
-
+         Looking for simple ways to improve your child’s learning, creativity, and confidence?
+         <br/>
+        👉 Our school magazine includes:<br/>
         <ul>
           <li data-aos="fade-up" data-aos-delay="100">Parenting tips</li>
           <li data-aos="fade-up" data-aos-delay="200">Stories and poems</li>
@@ -161,7 +169,7 @@
           <li data-aos="fade-up" data-aos-delay="500">Drawing ideas</li>
           <li data-aos="fade-up" data-aos-delay="600">Life lessons</li>
         </ul>
-
+        <p>And so many interesting topics...</p>
         <div class="highlight" data-aos="zoom-in" data-aos-delay="200">
           🎁 Free copy available(Worth Rs.500)<br>
           📦 Door delivery within 2 days<br>
@@ -179,32 +187,45 @@
 
         <div class="form-group" data-aos="fade-up">
           <label>Student Name *</label>
-          <input type="text" id="studentName" required>
+          <input type="text" id="studentName" placeholder="Enter Student Name">
         </div>
 
         <div class="form-group" data-aos="fade-up" data-aos-delay="100">
           <label>Class *</label>
-          <input type="text" id="className" required>
+          <select id="className" required>
+            <option value="">Select Class</option>
+            <option>KG</option>
+            <option>1st</option>
+            <option>2nd</option>
+            <option>3rd</option>
+            <option>4th</option>
+            <option>5th</option>
+            <option>6th</option>
+            <option>7th</option>
+            <option>8th</option>
+            <option>9th</option>
+            <option>10th</option>
+          </select>
         </div>
 
         <div class="form-group" data-aos="fade-up" data-aos-delay="200">
           <label>School Name *</label>
-          <input type="text" id="schoolName" value="Sri Bharathi Vidyalaya" required>
+          <input type="text" id="schoolName" placeholder="Enter School Name" required>
         </div>
 
         <div class="form-group" data-aos="fade-up" data-aos-delay="300">
           <label>Mobile Number *</label>
-          <input type="tel" id="mobile" required>
+          <input type="tel" id="mobile" placeholder="Enter Mobile Number" required>
         </div>
 
         <div class="form-group" data-aos="fade-up" data-aos-delay="400">
           <label>Email *</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" placeholder="Enter Email Id" required>
         </div>
 
         <div class="form-group" data-aos="fade-up" data-aos-delay="500">
           <label>Address *</label>
-          <textarea id="address" required></textarea>
+          <textarea id="address" placeholder="Enter Your Address" required></textarea>
         </div>
 
         <button type="submit" class="btn" data-aos="zoom-in">🎁 Reserve My Copy</button>
