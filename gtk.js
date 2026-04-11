@@ -1,0 +1,91 @@
+const DATA_GTK = {
+  "ADMIN SBV": {
+    nama: "School Administrator",
+    jabatan: "Administrator - Sri Bharathi Vidyalaya",
+    nip: "-",
+    nuptk: "-",
+    tempat_tanggal_lahir: "India, -",
+    sk_pengangkatan: "-",
+    nomor_npwp: "-",
+    tmt: "01-01-2024",
+    golongan: "-",
+    pendidikan: "Administration",
+    menjabat: "School Administrator",
+    status_kepegawaian: "Permanent",
+    no_hp: "9000000000",
+    alamat: "Sri Bharathi Vidyalaya Campus",
+    foto: "aset/admin.jpg"
+  },
+
+  "TCH001": {
+    nama: "Anitha Sharma, M.A., B.Ed",
+    jabatan: "Senior Teacher - English",
+    nip: "TCH001",
+    nuptk: "-",
+    tempat_tanggal_lahir: "Chennai, 12-05-1990",
+    sk_pengangkatan: "SBV/APPT/2020/001",
+    nomor_npwp: "-",
+    tmt: "15-06-2020",
+    golongan: "-",
+    pendidikan: "M.A., B.Ed (English)",
+    menjabat: "English Teacher",
+    status_kepegawaian: "Permanent",
+    no_hp: "9000000001",
+    alamat: "Chennai, Tamil Nadu",
+    foto: "aset/jojo.jpg"
+  },
+
+  "TCH002": {
+    nama: "Ravi Kumar, M.Sc., B.Ed",
+    jabatan: "Science Teacher",
+    nip: "TCH002",
+    nuptk: "-",
+    tempat_tanggal_lahir: "Madurai, 08-09-1988",
+    sk_pengangkatan: "SBV/APPT/2019/002",
+    nomor_npwp: "-",
+    tmt: "10-06-2019",
+    golongan: "-",
+    pendidikan: "M.Sc., B.Ed (Science)",
+    menjabat: "Science Teacher",
+    status_kepegawaian: "Permanent",
+    no_hp: "9000000002",
+    alamat: "Madurai, Tamil Nadu",
+    foto: "aset/jojo.jpg"
+  },
+
+  "TCH003": {
+    nama: "Priya Lakshmi, B.A., B.Ed",
+    jabatan: "Primary Teacher",
+    nip: "TCH003",
+    nuptk: "-",
+    tempat_tanggal_lahir: "Trichy, 15-03-1992",
+    sk_pengangkatan: "SBV/APPT/2021/003",
+    nomor_npwp: "-",
+    tmt: "12-07-2021",
+    golongan: "-",
+    pendidikan: "B.A., B.Ed",
+    menjabat: "Primary Teacher",
+    status_kepegawaian: "Permanent",
+    no_hp: "9000000003",
+    alamat: "Trichy, Tamil Nadu",
+    foto: "aset/teacher3.jpg"
+  },
+
+  "TCH004": {
+    nama: "Suresh Babu, M.Com",
+    jabatan: "Accounts & Commerce Teacher",
+    nip: "TCH004",
+    nuptk: "-",
+    tempat_tanggal_lahir: "Coimbatore, 20-11-1985",
+    sk_pengangkatan: "SBV/APPT/2018/004",
+    nomor_npwp: "-",
+    tmt: "05-06-2018",
+    golongan: "-",
+    pendidikan: "M.Com",
+    menjabat: "Commerce Teacher",
+    status_kepegawaian: "Permanent",
+    no_hp: "9000000004",
+    alamat: "Coimbatore, Tamil Nadu",
+    foto: "aset/jojo.jpg"
+  }
+};

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free School Magazine | Sri Bharathi Vidyalaya</title>
+
+  <link rel="icon" type="image/png" href="aset/logo.png">
+  <link rel="stylesheet" href="string.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui;
+      background: #f4f6f9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .magazine-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .magazine-content h1 {
+      color: #0b3c5d;
+    }
+
+    .desc {
+      line-height: 1.7;
+      color: #444;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      margin: 20px 0;
+      padding: 15px;
+      background: #eef6fb;
+      border-left: 5px solid #1e6fa3;
+      border-radius: 10px;
+      font-weight: 600;
+      color: #1e6fa3;
+    }
+
+    .form-card {
+      background: #f9fafc;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: inset 0 0 0 1px #e5e7eb;
+    }
+
+    .form-group {
+      margin-top: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #0b3c5d, #1e6fa3);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    #successMsg {
+      display: none;
+      color: green;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .magazine-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="mainHeader">
+  <div class="header-inner">
+    <img src="aset/logo.png" class="logo">
+    <div class="header-text">
+      <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
+      <span class="school-subtitle">Quality Education for a Bright Future</span>
+    </div>
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="profile.html">About Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="magazine.html">Magazine</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="login-btn">Login</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<div class="container">
+
+  <div class="magazine-layout">
+
+    <!-- LEFT CONTENT -->
+    <div class="magazine-content" data-aos="fade-right" data-aos-duration="1000">
+      <h1>📘 Get Your FREE School Magazine</h1>
+
+      <div class="desc">
+        <b>A Book Every Parent Should See!</b><br><br>
+
+        Improve your child’s learning, creativity, and confidence:
+
+        <ul>
+          <li data-aos="fade-up" data-aos-delay="100">Parenting tips</li>
+          <li data-aos="fade-up" data-aos-delay="200">Stories and poems</li>
+          <li data-aos="fade-up" data-aos-delay="300">Creative puzzles</li>
+          <li data-aos="fade-up" data-aos-delay="400">Science projects</li>
+          <li data-aos="fade-up" data-aos-delay="500">Drawing ideas</li>
+          <li data-aos="fade-up" data-aos-delay="600">Life lessons</li>
+        </ul>
+
+        <div class="highlight" data-aos="zoom-in" data-aos-delay="200">
+          🎁 Free copy available(Worth Rs.500)<br>
+          📦 Door delivery within 2 days<br>
+          📌 Limited copies available for selected parents
+        </div>
+
+        👉 Fill the form to reserve now
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-card" data-aos="fade-left" data-aos-duration="1000">
+
+      <form id="magazineForm">
+
+        <div class="form-group" data-aos="fade-up">
+          <label>Student Name *</label>
+          <input type="text" id="studentName" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="100">
+          <label>Class *</label>
+          <input type="text" id="className" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+          <label>School Name *</label>
+          <input type="text" id="schoolName" value="Sri Bharathi Vidyalaya" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+          <label>Mobile Number *</label>
+          <input type="tel" id="mobile" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+          <label>Email *</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="500">
+          <label>Address *</label>
+          <textarea id="address" required></textarea>
+        </div>
+
+        <button type="submit" class="btn" data-aos="zoom-in">🎁 Reserve My Copy</button>
+
+      </form>
+
+      <p id="successMsg">✅ Submitted successfully!</p>
+
+      <div class="note">* All fields are required</div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h4>Sri Barathi Vidyalaya School</h4>
+      <p>Committed to providing quality education and shaping future leaders.</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sribarathividyalaya"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@sribarathividyalayaschoolm1642"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="gallery.html"> Gallery</a></li>
+        <li><a href="magazine.html">Magazine</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+  <h4>Contact</h4>
+
+  <p>
+    <i class="fas fa-location-dot"></i>
+    <a href="https://maps.google.com/?q=43, West, Othai St, Mannargudi-614001" target="_blank">
+      43, West, Othai St, Mannargudi-614001
+    </a>
+  </p>
+
+  <p>
+    <i class="fas fa-phone"></i>
+    <a href="tel:+919840927298">+91 9840927298</a> |
+    <a href="tel:+918678927298">8678927298</a>
+  </p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:info@sribarathividyalaya.com">
+      info@sribarathividyalaya.com | admissions@sribarathividyalaya.com
+    </a> 
+   
+  </p>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 - 2026 Sri Barathi Vidyalaya School | All Rights Reserved</p>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000
+  });
+
+  const form = document.getElementById("magazineForm");
+  const successMsg = document.getElementById("successMsg");
+
+  const scriptURL = "https://script.google.com/macros/s/AKfycbx7dhQuYMKDBdVtl0bnMPOx9MyVaAqJ5Dx4ekqA0vFkoePKP9P5qpBuf9NbNeHaDOc0/exec";
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("studentName", document.getElementById("studentName").value);
+    formData.append("className", document.getElementById("className").value);
+    formData.append("schoolName", document.getElementById("schoolName").value);
+    formData.append("mobile", document.getElementById("mobile").value);
+    formData.append("email", document.getElementById("email").value);
+    formData.append("address", document.getElementById("address").value);
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      });
+
+      console.log(Object.fromEntries(formData)); // ✅ FIXED
+
+      successMsg.style.display = "block";
+      form.reset();
+
+    } catch (error) {
+      alert("Something went wrong!");
+      console.log(error);
+    }
+  });
+</script>
+
+</body>
+</html>
