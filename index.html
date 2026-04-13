@@ -133,7 +133,7 @@
       <h1 class="hero-title">Welcome to Sri Barathi Vidyalaya School</h1>
       <p class="hero-subtitle">Building Knowledge, Character, and Future Leaders</p>
       <div class="hero-buttons">
-        <a href="profile.html" class="hero-btn btn-primary">Learn More</a>
+        <a class="hero-btn btn-primary" onclick="openEnquiryModal()">Enquiry</a>
         <a href="gallery.html" class="hero-btn btn-secondary">View Gallery</a>
       </div>
     </div>
@@ -373,6 +373,63 @@
   <span class="close-modal">&times;</span>
   <img id="modalImg" class="modal-content">
 </div>
+<div id="enquiryModal" class="modal">
+  <div class="modal-content split">
+
+    <span class="close-btn-modal" onclick="closeEnquiryModal()">✖</span>
+
+    <!-- LEFT SIDE -->
+    <div class="modal-left">
+  <div class="flip-card">
+
+    <div class="flip-inner">
+
+      <!-- FRONT -->
+      <div class="flip-front">
+        <h2>Join Our School</h2>
+        <p>We provide quality education and values.</p>
+
+        <ul>
+          <li>✔ Experienced Teachers</li>
+          <li>✔ Smart Classrooms</li>
+          <li>✔ Safe Campus</li>
+        </ul>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-back">
+        <h2>Why Choose Us?</h2>
+        <p>
+          We focus on overall student development, modern teaching methods,
+          and strong academic excellence.
+        </p>
+
+        <p>📞 Contact us today for admissions!</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+    <!-- RIGHT SIDE -->
+    <div class="modal-right">
+      <h2>Enquiry Form</h2>
+
+      <form>
+        <input type="text" placeholder="Student Name" required>
+        <input type="text" placeholder="Parent Name" required>
+        <input type="email" placeholder="Email ID" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <textarea placeholder="Why do you want to join this school?" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+</div>
   <!-- FOOTER -->
   <footer class="footer">
   <div class="footer-content">
@@ -507,7 +564,14 @@ events.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 events.forEach(event => {
   const li = document.createElement("li");
+
   li.innerHTML = `<span>${event.date} :</span> ${event.title}`;
+
+  li.style.cursor = "pointer";
+  li.addEventListener("click", () => {
+    window.location.href = "Event.html";
+  });
+
   list.appendChild(li);
 });
 

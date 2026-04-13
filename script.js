@@ -100,7 +100,29 @@ setInterval(() => {
   showImage(index);
 }, 3000);
 
+// modal
+function openEnquiryModal(){
+  document.getElementById("enquiryModal").style.display = "flex";
+}
 
+function closeEnquiryModal(){
+  document.getElementById("enquiryModal").style.display = "none";
+}
+const flipCard = document.querySelector(".flip-card");
+
+if (flipCard) {
+  flipCard.addEventListener("click", () => {
+    flipCard.querySelector(".flip-inner").classList.toggle("flip-active");
+  });
+}
+
+/* Close modal when clicking outside */
+window.onclick = function(e){
+  const modal = document.getElementById("enquiryModal");
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+}
 // ========================================
 // CAROUSEL IMAGE SLIDER
 // ========================================
