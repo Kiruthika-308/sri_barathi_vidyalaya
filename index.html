@@ -6,32 +6,101 @@
   <title>Sri Barathi Vidyalaya School</title>
   <link rel="icon" type="image/png" href="aset/logo.png">
   <link rel="stylesheet" href="string.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+   <marquee behavior="scroll" direction="left">
+    <p>📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released</p>
+  </marquee>
+</div>
   <!-- HEADER -->
   <header id="mainHeader">
     <div class="header-inner">
       <img src="aset/logo.png" class="logo" alt="Logo Sri Barathi Vidyalaya School">
-      <div class="header-text">
+      <!-- <div class="header-text">
         <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
         <span class="school-subtitle">Quality Education for a Bright Future</span>
-      </div>
+      </div> -->
     </div>
-
+    <div class="burger" id="burgerMenu">☰</div>
     <nav id="navMenu">
       <a href="index.html">Home</a>
-      <a href="profile.html">About Us</a>
+
+      <div class="nav-dropdown">
+        <a href="profile.html" class="nav-drop-link">
+          About Us <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="foundation.html">Foundation</a>
+          <a href="Vision.html">Vision & Mission</a>
+        </div>
+      </div>
+
       <a href="gallery.html">Gallery</a>
+
+      <div class="nav-dropdown">
+        <a href="#" class="nav-drop-link">
+          Events <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="Event.html">Recent Events</a>
+          
+        </div>
+      </div>
       <a href="magazine.html">Magazine</a>
       <a href="contact.html">Contact</a>
       <a href="login.html" class="login-btn">Login</a>
     </nav>
-
-    <div class="burger" id="burgerMenu">&#9776;</div>
+    
   </header>
+<div id="overlay"></div>
+<div id="sidebar">
 
+  <div class="sidebar-header">
+    <img src="aset/logo.png" class="sidebar-logo" />
+    <span class="close-btn" id="closeSidebar">✖</span>
+  </div>
+
+  <a href="index.html">🏠 Home</a>
+
+  <div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="profile.html">ℹ️ About Us</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="foundation.html">Foundation</a>
+    <a href="Vision.html">Vision & Mission</a>
+  </div>
+
+</div>
+
+  <a href="gallery.html">🖼️ Gallery</a>
+
+  <div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="#">ℹ️ Events</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="Event.html">Recent Events</a>
+    
+  </div></div>
+
+  <a href="magazine.html">📘 Magazine</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="login.html" class="login-btn">Login</a>
+
+</div>
   <!-- HERO -->
   <section class="hero-section">
     <div class="carousel-container">
@@ -71,43 +140,61 @@
   </section>
 
  <!-- ABOUT -->
-<section class="about-section">
-  <div class="container">
-    <h2 class="section-title">About Us</h2>
 
-    <div class="about-grid">
-
-      <div class="about-card">
-        <div class="about-icon">🏫</div>
-        <h3>About the School</h3>
-        <p>
-          The School Management is committed to fulfilling all requirements for the development of the school and its students. 
-          With highly qualified and experienced teachers, we ensure quality education in a modern, well-ventilated and healthy environment.
-        </p>
+  <div class="profil-container">
+  
+    <section class="modern-about-section" data-aos="fade-up">
+  
+      <div class="modern-about-image" data-aos="fade-right">
+        <div class="carousel">
+  
+          <img src="aset/fotber1.jpeg" class="active">
+          <img src="aset/fotber2.jpeg">
+          <img src="aset/fotber3.jpeg">
+  
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+  
+        </div>
       </div>
-
-      <div class="about-card">
-        <div class="about-icon">🌍</div>
-        <h3>Global Learning</h3>
-        <p>
-          We prepare students for an interconnected world by integrating personalized learning and reflective practices, helping them build knowledge, skills, and confidence.
+  
+      <div class="modern-about-content" data-aos="fade-left">
+        <h2 data-aos="zoom-in">About</h2>
+  
+        <p  data-aos="fade-up" data-aos-delay="100">
+          SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely
+          acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the
+          city.
         </p>
-      </div>
-
-      <div class="about-card">
-        <div class="about-icon">🎓</div>
-        <h3>Student Growth</h3>
-        <p>
-          Students become part of a dynamic learning environment where they explore, grow, and take responsibility for their learning journey.
+  
+        <p  data-aos="fade-up" data-aos-delay="200">
+          <strong> Our Teaching Philosophy :</strong><br>
+          At Sri Barathi Vidyalaya, our teachers are more than just educators—they are mentors,
+          facilitators, and lifelong learners committed to nurturing the potential of every student.
         </p>
+  
+        <p  data-aos="fade-up" data-aos-delay="300">
+  
+          <strong> Beyond Classroom:</strong><br>
+          It is essential to develop our young minds’ thinking ability, innovativeness & the ability to function properly
+          in society,
+          hence we offer several co-curricular activities and extracurricular activities such as Silambam, Karate,
+          Archery, Chess
+        </p>
+        <p  data-aos="fade-up" data-aos-delay="400">
+          <strong>Excellent Transportation:</strong><br>
+          Our school provides top-notch transportation facilities for students residing in and around our town.
+          Whether you're in the heart of the city or nestled in the outskirts, we've got you covered!
+        </p>
+        <a href="profile.html" class="read-btn" data-aos="zoom-in" data-aos-delay="500">Read More →</a>
       </div>
-
-    </div>
+  
+    </section>
   </div>
-</section>
+
 
 <!-- FOUNDATION -->
-<section class="features-section">
+<!-- <section class="features-section">
   <div class="container">
     <h2 class="section-title">Foundation & History</h2>
 
@@ -139,16 +226,16 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- VISION MISSION -->
 <section class="ekstrakurikuler">
   <div class="container">
-    <h2 class="section-title">Vision & Mission</h2>
+    <h2 class="section-title" data-aos="fade-up">Vision & Mission</h2>
 
     <div class="ekstra-grid">
 
-      <div class="ekstra-card">
+      <div class="ekstra-card" data-aos="fade-right">
         <div class="ekstra-icon">👁️</div>
         <h3>Vision</h3>
         <p>
@@ -156,7 +243,7 @@
         </p>
       </div>
 
-      <div class="ekstra-card">
+      <div class="ekstra-card" data-aos="fade-left">
         <div class="ekstra-icon">🎯</div>
         <h3>Mission</h3>
         <p>
@@ -168,8 +255,55 @@
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="unggulan">
+<section class="gallery-scroll-section">
+
+  <div class="gallery-header" >
+    <h2 class="gallery-title" data-aos="fade-right">Our Gallery</h2>
+    <a href="gallery.html" class="view-more-btn" data-aos="fade-left">View More →</a>
+  </div>
+
+  <div class="carousel-wrapper" data-aos="fade-up">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="card"><img src="aset/fotber1.jpeg"></div>
+      <div class="card"><img src="aset/fotber2.jpeg"></div>
+      <div class="card"><img src="aset/fotber3.jpeg"></div>
+      <div class="card"><img src="aset/fotber4.jpeg"></div>
+      <div class="card"><img src="aset/logo.png"></div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="latest-events">
+  <div class="events-container">
+
+    <!-- Left Side (Highlights) -->
+    <div class="highlights" data-aos="fade-right">
+      <h2>Why Choose Us</h2>
+
+      <div class="highlight-item">✔ Experienced Faculty</div>
+      <div class="highlight-item">✔ Smart Classrooms</div>
+      <div class="highlight-item">✔ Holistic Development</div>
+      <div class="highlight-item">✔ Safe & Friendly Environment</div>
+      <div class="highlight-item">✔ Extra-Curricular Activities</div>
+    </div>
+
+    <!-- Right Side (Events) -->
+    <div class="events-content" data-aos="fade-left">
+      <h2>Latest Events</h2>
+
+      <div class="events-scroll">
+  <ul class="events-list" id="eventsList"></ul>
+</div>
+    </div>
+
+  </div>
+</section>
+
+ <!-- VALUES  -->
+<!-- <section class="unggulan">
   <h2>Our Values</h2>
 
   <div class="vision-content">
@@ -200,10 +334,11 @@
     </div>
 
   </div>
-</section>
+</section> 
+
 
 <!-- ENROLLMENT (kept but refined) -->
-<section class="spmb enrollment-section">
+<section class="spmb enrollment-section" data-aos="fade-up">
   <h2>Enroll Your Child Today</h2>
   <p class="enrollment-subtitle">
     Join Sri Barathi Vidyalaya School and give your child a bright future
@@ -234,7 +369,10 @@
     </a>
   </div>
 </section>
-
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg" class="modal-content">
+</div>
   <!-- FOOTER -->
   <footer class="footer">
   <div class="footer-content">
@@ -242,8 +380,9 @@
     <!-- About -->
     <div class="footer-section">
       <h4>Sri Barathi Vidyalaya School</h4>
-      <p>Committed to providing quality education and shaping future leaders.</p>
-
+<p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
+        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
+        
       <div class="social-icons">
         <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/sribarathividyalaya"><i class="fab fa-instagram"></i></a>
@@ -314,40 +453,65 @@
 
   <!-- SCRIPTS -->
   <script src="gtk.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> 
+  <script>
+const track = document.getElementById("carouselTrack");
 
-  
-  <!-- Mobile Menu Handler -->
-<script>
-const burgerMenu = document.getElementById('burgerMenu');
-const navMenu = document.getElementById('navMenu');
-const header = document.getElementById('mainHeader');
+// Duplicate carousel items
+track.innerHTML += track.innerHTML;
 
-if (burgerMenu && navMenu && header) {
-  burgerMenu.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navMenu.classList.toggle('active');
+// AOS Init
+AOS.init({
+  duration: 1000,
+  once: true
+});
+
+// Modal Elements
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeModal = document.querySelector(".close-modal");
+
+// Add click event to all carousel images
+document.querySelectorAll("#carouselTrack img").forEach(img => {
+  img.style.cursor = "pointer";
+
+  img.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
   });
+});
 
-  navMenu.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+// Close Modal Button
+closeModal.onclick = () => {
+  modal.style.display = "none";
+};
 
-  document.addEventListener('click', (e) => {
-    if (!header.contains(e.target)) {
-      navMenu.classList.remove('active');
-    }
-  });
+// Close When Clicking Outside Image
+modal.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-      navMenu.classList.remove('active');
-    }
-  });
-}
+const events = [
+  { date: "May 15", title: "Annual Day" },
+  { date: "March 10", title: "Sports Day" },
+  { date: "September 5", title: "Teachers Day" },
+  { date: "February 20", title: "Science Exhibition" }
+];
+
+const list = document.getElementById("eventsList");
+
+events.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+events.forEach(event => {
+  const li = document.createElement("li");
+  li.innerHTML = `<span>${event.date} :</span> ${event.title}`;
+  list.appendChild(li);
+});
+
 </script>
-
-  
 </body>
 </html>
 

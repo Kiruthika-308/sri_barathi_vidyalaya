@@ -14,14 +14,29 @@
 
   <style>
     body {
-      margin: 0;
-      font-family: system-ui;
-      background: #f4f6f9;
-    }
+  margin: 0;
+  font-family: system-ui;
+  background: #f4f6f9;
+}
+.burger {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 26px;
+    color: #fff;
+    z-index: 1006;
+    cursor: pointer;
+  }
+}
     .container {
       max-width: 1100px;
-      margin: 50px auto;
+      margin: 70px auto;
       background: #fff;
       padding: 30px;
       border-radius: 16px;
@@ -126,25 +141,92 @@
 </head>
 
 <body>
-
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+   <marquee behavior="scroll" direction="left">
+    <p>📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released</p>
+  </marquee>
+</div>
 <header id="mainHeader">
   <div class="header-inner">
     <img src="aset/logo.png" class="logo">
-    <div class="header-text">
+    <!-- <div class="header-text">
       <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
       <span class="school-subtitle">Quality Education for a Bright Future</span>
+    </div> -->
+  </div>
+
+ <div class="burger" id="burgerMenu">☰</div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="profile.html" class="nav-drop-link">
+          About Us <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="foundation.html">Foundation</a>
+          <a href="Vision.html">Vision & Mission</a>
+        </div>
+      </div>
+      <a href="gallery.html">Gallery</a>
+      
+      <div class="nav-dropdown">
+        <a href="#" class="nav-drop-link">
+          Events <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="Event.html">Recent Events</a>
+          
+        </div>
+      </div>
+
+      <a href="magazine.html">Magazine</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </nav>
+    
+  </header>
+<div id="overlay"></div>
+<div id="sidebar">
+
+  <div class="sidebar-header">
+    <img src="aset/logo.png" class="sidebar-logo" />
+    <span class="close-btn" id="closeSidebar">✖</span>
+  </div>
+
+  <a href="index.html">🏠 Home</a>
+  <div class="sidebar-dropdown">
+    <a href="profile.html" class="sidebar-drop-link" onclick="toggleSidebarDropdown()">
+      ℹ️ About Us <i class="fas fa-chevron-down"></i>
+    </a>
+  
+    <div class="sidebar-dropdown-content" id="sidebarDropdown">
+      <a href="foundation.html">Foundation</a>
+      <a href="Vision.html">Vision & Mission</a>
     </div>
   </div>
 
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="profile.html">About Us</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="magazine.html">Magazine</a>
-    <a href="contact.html">Contact</a>
-    <a href="login.html" class="login-btn">Login</a>
-  </nav>
-</header>
+  <a href="gallery.html">🖼️ Gallery</a>
+
+<div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="#">ℹ️ Events</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="Event.html">Recent Events</a>
+    
+  </div></div>
+
+  <a href="magazine.html">📘 Magazine</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="login.html" class="login-btn">Login</a>
+
+</div>
 
 <!-- MAIN -->
 <div class="container">
@@ -246,7 +328,8 @@
     <!-- About -->
     <div class="footer-section">
       <h4>Sri Barathi Vidyalaya School</h4>
-      <p>Committed to providing quality education and shaping future leaders.</p>
+      <p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
+        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
 
       <div class="social-icons">
         <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
@@ -343,6 +426,6 @@
     }
   });
 </script>
-
+ <script src="script.js"></script> 
 </body>
 </html>

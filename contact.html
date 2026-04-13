@@ -15,20 +15,6 @@
       padding-top: 70px
     }
 
-    #mainHeader {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #0b3c5d;
-      color: #fff;
-      z-index: 1000;
-      padding: 10px 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
-      transition: transform 0.3s ease;
-      display: flex;
-      justify-content: space-between;
-      align-items: center
-    }
 
     .header-inner {
       display: flex;
@@ -42,11 +28,6 @@
       gap: 2px
     }
 
-    .logo {
-      height: 40px;
-      width: 40px;
-      object-fit: contain
-    }
 
     .school-name {
       font-weight: 700;
@@ -81,141 +62,103 @@
       border-radius: 2px
     }
 
-    .kontak-wrapper {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px
-    }
+    /* WRAPPER */
+.contact-wrapper{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+}
 
-    .kontak-header {
-      text-align: center;
-      margin-bottom: 50px
-    }
+/* CONTAINER */
+.contact-container{
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+}
 
-    .kontak-header h1 {
-      margin: 0;
-      color: #0b3c5d;
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      font-weight: 800
-    }
+/* LEFT FORM */
+.contact-form{
+  flex:1;
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .kontak-header p {
-      color: #666;
-      margin-top: 10px;
-      font-size: 1.1rem
-    }
+.contact-form h3{
+  margin-bottom:20px;
+}
 
-    .kontak-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-bottom: 50px
-    }
+.contact-form form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
 
-    .kontak-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 35px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      border: 2px solid transparent;
-      position: relative;
-      overflow: hidden
-    }
+.contact-form input,
+.contact-form textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:1rem;
+  outline:none;
+}
 
-    .kontak-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(247, 183, 51, 0.1), rgba(252, 74, 26, 0.1));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.35s ease;
-      z-index: 0
-    }
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#0b3c5d;
+}
 
-    .kontak-card:hover::before {
-      transform: scaleX(1)
-    }
+.contact-form button{
+  padding:12px;
+  background:#0b3c5d;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
 
-    .kontak-card:hover {
-      transform: translateY(-8px);
-      border-color: #0b3c5d;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12)
-    }
+.contact-form button:hover{
+  background:#1e6fa3;
+}
 
-    .kontak-card.link-card:active {
-      transform: scale(0.97)
-    }
+/* RIGHT SIDE */
+.contact-info{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
 
-    .kontak-icon {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      display: block;
-      position: relative;
-      z-index: 1
-    }
+/* MAP */
+.map iframe{
+  width:100%;
+  height:250px;
+  border-radius:12px;
+}
 
-    .kontak-card h3 {
-      margin: 15px 0 10px;
-      color: #0b3c5d;
-      font-size: 1.3rem;
-      font-weight: 700;
-      position: relative;
-      z-index: 1
-    }
+/* INFO BOX */
+.info-box{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .kontak-card p {
-      margin: 0;
-      font-size: 1rem;
-      color: #555;
-      word-break: break-word;
-      line-height: 1.6;
-      position: relative;
-      z-index: 1;
-      font-weight: 500
-    }
+.info-box p{
+  margin-bottom:15px;
+  color:#444;
+  line-height:1.6;
+}
 
-    .kontak-note {
-      text-align: center;
-      font-size: 1rem;
-      color: #666;
-      padding: 25px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      margin: 30px 0;
-      border-left: 4px solid #f7b733
-    }
-
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      background: #0b3c5d;
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-      transition: all .3s ease;
-      position: fixed;
-      top: 90px;
-      left: 20px;
-      z-index: 999
-    }
-
-    .back-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
-      background: #1e6fa3
-    }
-
+/* RESPONSIVE */
+@media(max-width:768px){
+  .contact-container{
+    flex-direction:column;
+  }
+}
     .footer {
       background: #0b3c5d;
       color: white;
@@ -232,76 +175,159 @@
 </head>
 
 <body>
+  <!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+   <marquee behavior="scroll" direction="left">
+    <p>📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released</p>
+  </marquee>
+</div>
   <header id="mainHeader">
     <div class="header-inner">
       <img src="aset/logo.png" class="logo" alt="Logo Sri Barathi Vidyalaya School">
-      <div class="header-text">
+      <!-- <div class="header-text">
         <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
         <span class="school-subtitle">Quality Education for a Bright Future</span>
-      </div>
+      </div> -->
     </div>
-
+<div class="burger" id="burgerMenu">☰</div>
     <nav id="navMenu">
       <a href="index.html">Home</a>
-      <a href="profile.html">About Us</a>
+      <div class="nav-dropdown">
+        <a href="profile.html" class="nav-drop-link">
+          About Us <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="foundation.html">Foundation</a>
+          <a href="Vision.html">Vision & Mission</a>
+        </div>
+      </div>
       <a href="gallery.html">Gallery</a>
+
+      <div class="nav-dropdown">
+        <a href="#" class="nav-drop-link">
+          Events <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="Event.html">Recent Events</a>
+          
+        </div>
+      </div>
+
       <a href="magazine.html">Magazine</a>
       <a href="contact.html">Contact</a>
       <a href="login.html" class="login-btn">Login</a>
     </nav>
-
-    <div class="burger" id="burgerMenu">&#9776;</div>
+    
   </header>
+<div id="overlay"></div>
+<div id="sidebar">
+
+  <div class="sidebar-header">
+    <img src="aset/logo.png" class="sidebar-logo" />
+    <span class="close-btn" id="closeSidebar">✖</span>
+  </div>
+
+  <a href="index.html">🏠 Home</a>
+ <div class="sidebar-dropdown">
+    <a href="profile.html" class="sidebar-drop-link" onclick="toggleSidebarDropdown()">
+      ℹ️ About Us <i class="fas fa-chevron-down"></i>
+    </a>
+  
+    <div class="sidebar-dropdown-content" id="sidebarDropdown">
+      <a href="foundation.html">Foundation</a>
+      <a href="Vision.html">Vision & Mission</a>
+    </div>
+  </div>
+
+  <a href="gallery.html">🖼️ Gallery</a>
+
+  <div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="#">ℹ️ Events</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="Event.html">Recent Events</a>
+    
+  </div></div>
+
+  <a href="magazine.html">📘 Magazine</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="login.html" class="login-btn">Login</a>
+
+</div>
 
  
-  <div class="kontak-wrapper">
-    <div class="kontak-header">
-      <h2 class="section-title">Contact Us</h2>
-      <p>We are here to help you. Choose your preferred way to contact us</p>
+  <div class="contact-wrapper">
+
+  <h2 class="section-title">Contact Us</h2>
+
+  <div class="contact-container">
+
+    <!-- LEFT: FORM -->
+    <div class="contact-form">
+      <h3>Send Message</h3>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone">
+
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-    <div class="kontak-grid">
 
-      <a href="#" target="_blank" class="kontak-card link-card">
-        <div class="kontak-icon">📍</div>
-        <h3>School Address</h3>
-        <p>Main Road<br>Your Town<br>Your District, India</p>
-      </a>
+    <!-- RIGHT: MAP + DETAILS -->
+    <div class="contact-info">
 
-      <a href="#" target="_blank" class="kontak-card link-card">
-        <div class="kontak-icon">📱</div>
-        <h3>WhatsApp</h3>
-        <p>+91 9876543210<br>(School Office)</p>
-      </a>
+      <!-- Google Map -->
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.8772963549554!2d79.4585650745159!3d10.666631261210437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a554c2d3047a7cf%3A0x719bda7b09e99bcc!2sSri%20Barathi%20Vidyalaya%20school!5e0!3m2!1sen!2sin!4v1776077975264!5m2!1sen!2sin" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 
-      <a href="tel:+919876543210" class="kontak-card link-card">
-        <div class="kontak-icon">📞</div>
-        <h3>Phone</h3>
-        <p>+91 9876543210<br>Working Days: Monday-Friday</p>
-      </a>
+      <!-- Details -->
+      <div class="info-box">
+       <p>
+    <i class="fas fa-location-dot"></i>
+    <strong>Address: </strong><br/>
+    <a href="https://maps.app.goo.gl/8ETAcgdsZTD7BrQ8A" target="_blank">
+      43, West, Othai Street, Mannargudi-614001
+    </a>
+  </p>
 
-      <a href="mailto:info@sribharathividyalaya.edu" class="kontak-card link-card">
-        <div class="kontak-icon">✉️</div>
-        <h3>Email</h3>
-        <p>info@sribharathividyalaya.edu<br>Quick response</p>
-      </a>
+  <p>
+    <i class="fas fa-phone"></i>
+    <strong>Mobile Number:</strong><br>
+    <a href="tel:+919840927298">+91 9840927298</a> |
+    <a href="tel:+918678927298">8678927298</a>
+  </p>
 
-      <a href="#" target="_blank" class="kontak-card link-card">
-        <div class="kontak-icon">📝</div>
-        <h3>Admission Form</h3>
-        <p>New Student Registration<br>Click to open form</p>
-      </a>
-
-      <div class="kontak-card">
-        <div class="kontak-icon">🕐</div>
-        <h3>Working Hours</h3>
-        <p>Monday – Saturday<br>08:00 AM – 03:00 PM</p>
+  <p>
+    <i class="fas fa-envelope"></i>
+    <strong>Email:</strong><br/>
+    <a href="mailto:info@sribarathividyalaya.com">
+      info@sribarathividyalaya.com | admissions@sribarathividyalaya.com
+    </a> 
+   
+  </p>
       </div>
 
     </div>
 
-    <div class="kontak-note">💡 <strong>Tip:</strong> Contact us via WhatsApp for the fastest response. We assist with
-      admissions, academics, and general inquiries.</div>
   </div>
+</div>
 
   <footer class="footer">
   <div class="footer-content">
@@ -309,7 +335,8 @@
     <!-- About -->
     <div class="footer-section">
       <h4>Sri Barathi Vidyalaya School</h4>
-      <p>Committed to providing quality education and shaping future leaders.</p>
+      <p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
+        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
 
       <div class="social-icons">
         <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
@@ -337,7 +364,7 @@
   <p>
     <i class="fas fa-location-dot"></i>
     <a href="https://maps.google.com/?q=43, West, Othai St, Mannargudi-614001" target="_blank">
-      43, West, Othai St, Mannargudi-614001
+      43, West, Othai Street, Mannargudi-614001
     </a>
   </p>
 

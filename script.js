@@ -1,6 +1,105 @@
 // ========================================
 // MA1N.HTML - JAVASCRIPT INTERAKSI
 // ========================================
+const header = document.getElementById("mainHeader");
+//sidebar 
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burgerMenu");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("closeSidebar"); // optional
+  const header = document.getElementById("mainHeader");
+  // Safety check
+  if (!burger || !sidebar || !overlay) return;
+    header.style.transform = "translateY(0)";
+
+  // Open/Close toggle
+  const toggleMenu = () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    burger.classList.toggle("active");
+
+    const isOpen = burger.classList.contains("active");
+
+    burger.textContent = isOpen ? "✖" : "☰";
+    document.body.classList.toggle("no-scroll", isOpen);
+  };
+
+  burger.addEventListener("click", toggleMenu);
+
+  // Close function
+  const closeMenu = () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    burger.classList.remove("active");
+    burger.textContent = "☰";
+    document.body.classList.remove("no-scroll");
+
+    header.style.transform = "translateY(0)";
+  };
+
+  overlay.addEventListener("click", closeMenu);
+
+  // Close when clicking links
+  document.querySelectorAll("#sidebar a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Optional: close button inside sidebar
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeMenu);
+  }
+  
+});
+
+// function toggleSidebarDropdown(){
+//   const dropdown = document.getElementById("sidebarDropdown");
+
+//   if(dropdown.style.display === "block"){
+//     dropdown.style.display = "none";
+//   } else {
+//     dropdown.style.display = "block";
+//   }
+// }
+function toggleDropdown(icon) {
+  const menu = icon.parentElement.nextElementSibling;
+
+  document.querySelectorAll(".sidebar-dropdown-content").forEach(item => {
+    if (item !== menu) {
+      item.classList.remove("show");
+    }
+  });
+
+  menu.classList.toggle("show");
+}
+
+const images = document.querySelectorAll(".carousel img");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+let index = 0;
+
+function showImage(i){
+  images.forEach(img => img.classList.remove("active"));
+  images[i].classList.add("active");
+}
+
+next.addEventListener("click", () => {
+  index = (index + 1) % images.length;
+  showImage(index);
+});
+
+prev.addEventListener("click", () => {
+  index = (index - 1 + images.length) % images.length;
+  showImage(index);
+});
+
+/* Auto slide */
+setInterval(() => {
+  index = (index + 1) % images.length;
+  showImage(index);
+}, 3000);
+
 
 // ========================================
 // CAROUSEL IMAGE SLIDER
@@ -152,22 +251,6 @@ window.addEventListener('click', function(event) {
   }
 });
 
-// 2. MOBILE MENU TOGGLE
-const burger = document.getElementById('burgerMenu');
-const nav = document.getElementById('navMenu');
-
-if (burger && nav) {
-  burger.addEventListener('click', function() {
-    nav.classList.toggle('active');
-  });
-
-  // Close menu saat link diklik
-  document.querySelectorAll('#navMenu a').forEach(link => {
-    link.addEventListener('click', function() {
-      nav.classList.remove('active');
-    });
-  });
-}
 
 // 3. SMOOTH SCROLL UNTUK NAVIGASI
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

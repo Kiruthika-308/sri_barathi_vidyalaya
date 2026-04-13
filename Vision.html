@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile of Sri Bharathi Vidyalaya - Quality Primary School</title>
+  <link rel="icon" type="image/png" href="aset/logo.png">
+  <link rel="stylesheet" href="string.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+.profil-container{
+  max-width:1400px;
+  margin:auto;
+  padding:50px 30px 80px;
+}
+
+/* HEADER */
+.vm-header{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.vm-header h1{
+  font-size:3rem;
+  font-weight:800;
+  color:#0b2d5c;
+  margin-bottom:12px;
+}
+
+.vm-header p{
+  font-size:1.05rem;
+  color:#666;
+}
+
+/* GRID */
+.vm-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+  align-items:stretch;
+}
+
+/* CARD */
+.vm-card{
+  background:#fff;
+  padding:35px 28px;
+  border-radius:28px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  border:1px solid #eee;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  transition:.35s ease;
+}
+
+.vm-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* ICON */
+.vm-icon{
+  font-size:3rem;
+  margin-bottom:18px;
+  width:70px;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* TITLE */
+.vm-card h2{
+  font-size:2rem;
+  color:#0b2d5c;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+/* TEXT */
+.vm-card p{
+  font-size:1rem;
+  line-height:1.9;
+  color:#555;
+  margin-bottom:15px;
+  text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .profil-container{
+    padding:35px 18px 60px;
+  }
+
+  .vm-header h1{
+    font-size:2.2rem;
+  }
+
+  .vm-card{
+    padding:30px 22px;
+  }
+
+  .vm-card h2{
+    font-size:1.7rem;
+  }
+
+  .vm-card p{
+    font-size:0.95rem;
+  }
+}
+</style>
+  </head>
+<body>
+  <!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+   <marquee behavior="scroll" direction="left">
+    <p>📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released</p>
+  </marquee>
+</div>
+  <header id="mainHeader">
+    <div class="header-inner">
+      <img src="aset/logo.png" class="logo" alt="Logo Sri Barathi Vidyalaya School">
+      <!-- <div class="header-text">
+        <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
+        <span class="school-subtitle">Quality Education for a Bright Future</span>
+      </div> -->
+    </div>
+
+    <div class="burger" id="burgerMenu">☰</div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="profile.html" class="nav-drop-link">
+          About Us <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="foundation.html">Foundation</a>
+          <a href="Vision.html">Vision & Mission</a>
+        </div>
+      </div>
+      <a href="gallery.html">Gallery</a>
+
+      <div class="nav-dropdown">
+        <a href="#" class="nav-drop-link">
+          Events <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="Event.html">Recent Events</a>
+          
+        </div>
+      </div>
+      
+      <a href="magazine.html">Magazine</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </nav>
+    
+  </header>
+<div id="overlay"></div>
+<div id="sidebar">
+
+  <div class="sidebar-header">
+    <img src="aset/logo.png" class="sidebar-logo" />
+    <span class="close-btn" id="closeSidebar">✖</span>
+  </div>
+
+  <a href="index.html">🏠 Home</a>
+  <div class="sidebar-dropdown">
+    <a href="profile.html" class="sidebar-drop-link" onclick="toggleSidebarDropdown()">
+      ℹ️ About Us <i class="fas fa-chevron-down"></i>
+    </a>
+  
+    <div class="sidebar-dropdown-content" id="sidebarDropdown">
+      <a href="foundation.html">Foundation</a>
+      <a href="Vision.html">Vision & Mission</a>
+    </div>
+  </div>
+
+  <a href="gallery.html">🖼️ Gallery</a>
+
+<div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="#">ℹ️ Events</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="Event.html">Recent Events</a>
+    
+  </div></div>
+
+  <a href="magazine.html">📘 Magazine</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="login.html" class="login-btn">Login</a>
+
+</div>
+
+<main>
+  <div class="profil-container">
+
+    <section class="vm-header" data-aos="fade-up">
+      <h1>Vision, Mission & Values</h1>
+      <p>Guiding principles that shape the future of our students.</p>
+    </section>
+
+    <section class="vm-grid">
+
+      <div class="vm-card" data-aos="zoom-in">
+        <div class="vm-icon">👁️</div>
+        <h2>Vision</h2>
+        <p>
+          Education is not merely about imparting knowledge; 
+          it's about nurturing curiosity, critical thinking, and creativity. 
+          A holistic approach to education should prioritize personalized learning experiences, 
+          foster a culture of lifelong learning, embrace diversity, and equip learners with essential skills for the future, 
+          such as adaptability, collaboration, and digital literacy.
+        </p><p> Moreover, it should be accessible to all, irrespective of background or circumstance, and 
+          should empower individuals to become active contributors to their communities and the world at large.
+        </p>
+      </div>
+
+      <div class="vm-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="vm-icon">🎯</div>
+        <h2>Mission</h2>
+        <p>
+          Our mission in education is to inspire and empower every learner to reach their full potential. 
+          We aim to provide high-quality, equitable education that meets the diverse needs of all learners. </p>
+          <p>
+          By fostering a supportive and inclusive learning environment, we strive to instill a passion for lifelong learning, 
+          critical thinking, and problem- solving skills. Our mission is to prepare students to thrive in an ever-changing world by equipping them with the knowledge, 
+          skills, and values necessary to become responsible global citizens and leaders in their communities.
+        </p>
+      </div>
+
+      <div class="vm-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="vm-icon">💎</div>
+        <h2>Values</h2>
+        <p>
+          The objective of establishing this school is to provide a standard institution 
+          which will aim at improving the skills of the students and refining their social manners. 
+          Special attention will be given to improving the hand writing of children.
+        </p>
+
+        <p>
+        Efforts will be made to encourage children to show interest in acquiring general Knowledge. 
+        General Knowledge Tests and Drawing Competitions will form part of the curricular activities of each term. 
+        General Knowledge, Drawing, Physical Education and Computer Science will be taught during regular working hours with the help of specially Trained Teachers.
+        </p>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-content">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h4>Sri Barathi Vidyalaya School</h4>
+     <p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
+        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sribarathividyalaya"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@sribarathividyalayaschoolm1642"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="gallery.html"> Gallery</a></li>
+        <li><a href="magazine.html">Magazine</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+  <h4>Contact</h4>
+
+  <p>
+    <i class="fas fa-location-dot"></i>
+    <a href="https://maps.google.com/?q=43, West, Othai St, Mannargudi-614001" target="_blank">
+      43, West, Othai St, Mannargudi-614001
+    </a>
+  </p>
+
+  <p>
+    <i class="fas fa-phone"></i>
+    <a href="tel:+919840927298">+91 9840927298</a> |
+    <a href="tel:+918678927298">8678927298</a>
+  </p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:info@sribarathividyalaya.com">
+      info@sribarathividyalaya.com | admissions@sribarathividyalaya.com
+    </a> 
+   
+  </p>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 - 2026 Sri Barathi Vidyalaya School | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-in-out"
+});
+</script>
+<script src="script.js"></script> 
+
+</body>
+</html>

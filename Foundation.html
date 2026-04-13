@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile of Sri Bharathi Vidyalaya - Quality Primary School</title>
+  <link rel="icon" type="image/png" href="aset/logo.png">
+  <link rel="stylesheet" href="string.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+.profil-container{
+  max-width:1400px;
+  margin:auto;
+  padding:40px 30px 80px;
+}
+
+/* MODERN ABOUT SECTION */
+.modern-about-section{
+  display:flex;
+  align-items:center;
+  gap:55px;
+  padding:40px 0;
+  flex-wrap:wrap;
+}
+
+.modern-about-image{
+  flex:1;
+  min-width:280px;
+}
+
+.modern-about-image img{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  border-radius:26px;
+  display:block;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+.modern-about-content{
+  flex:1;
+  min-width:280px;
+}
+
+.modern-about-content h2{
+  font-size:3rem;
+  font-weight:800;
+  color:#0b2d5c;
+  margin-bottom:18px;
+  line-height:1.1;
+}
+
+.modern-about-content h2::after{
+  content:"";
+  display:block;
+  width:65px;
+  height:6px;
+  background:#e0a11b;
+  margin-top:10px;
+  border-radius:10px;
+}
+
+.modern-about-content p{
+  font-size:1rem;
+  line-height:1.8;
+  color:#5a5a5a;
+  margin-bottom:18px;
+  text-align:justify;
+}
+
+/* Tablet */
+@media(max-width:992px){
+  .modern-about-section{
+    flex-direction:column;
+    gap:35px;
+  }
+
+  .modern-about-image img{
+    height:auto;
+    max-height:500px;
+  }
+
+  .modern-about-content h2{
+    font-size:3rem;
+  }
+}
+
+/* Mobile */
+@media(max-width:576px){
+  .profil-container{
+    padding:30px 18px 60px;
+  }
+
+  .modern-about-content h2{
+    font-size:2.3rem;
+  }
+
+  .modern-about-content p{
+    font-size:1rem;
+    line-height:1.9;
+  }
+
+  .modern-about-image img{
+    border-radius:22px;
+  }
+}
+</style>
+</head>
+<body>
+<body>
+  <!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+   <marquee behavior="scroll" direction="left">
+    <p>📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released</p>
+  </marquee>
+</div>
+  <header id="mainHeader">
+    <div class="header-inner">
+      <img src="aset/logo.png" class="logo" alt="Logo Sri Barathi Vidyalaya School">
+      <!-- <div class="header-text">
+        <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
+        <span class="school-subtitle">Quality Education for a Bright Future</span>
+      </div> -->
+    </div>
+
+    <div class="burger" id="burgerMenu">☰</div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="profile.html" class="nav-drop-link">
+          About Us <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="foundation.html">Foundation</a>
+          <a href="Vision.html">Vision & Mission</a>
+        </div>
+      </div>
+      <a href="gallery.html">Gallery</a>
+
+      <div class="nav-dropdown">
+        <a href="#" class="nav-drop-link">
+          Events <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="Event.html">Recent Events</a>
+          
+        </div>
+      </div>
+
+      <a href="magazine.html">Magazine</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </nav>
+    
+  </header>
+<div id="overlay"></div>
+<div id="sidebar">
+
+  <div class="sidebar-header">
+    <img src="aset/logo.png" class="sidebar-logo" />
+    <span class="close-btn" id="closeSidebar">✖</span>
+  </div>
+
+  <a href="index.html">🏠 Home</a>
+  <div class="sidebar-dropdown">
+    <a href="profile.html" class="sidebar-drop-link" onclick="toggleSidebarDropdown()">
+      ℹ️ About Us <i class="fas fa-chevron-down"></i>
+    </a>
+  
+    <div class="sidebar-dropdown-content" id="sidebarDropdown">
+      <a href="foundation.html">Foundation</a>
+      <a href="Vision.html">Vision & Mission</a>
+    </div>
+  </div>
+
+  <a href="gallery.html">🖼️ Gallery</a>
+
+<div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="#">ℹ️ Events</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="Event.html">Recent Events</a>
+    
+  </div></div>
+
+  <a href="magazine.html">📘 Magazine</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="login.html" class="login-btn">Login</a>
+
+</div>
+
+<main>
+  <div class="profil-container">
+
+    <section class="modern-about-section" data-aos="fade-up">
+
+      <div class="modern-about-content">
+        <h2>Foundation</h2>
+
+        <p>
+          Sri .C. Krishnan, K. Raghavan and Srimathi. Booma Krishnan are trustees of the Sri Barathi Vidyalaya Trust. Srimathi. 
+          Booma Krishnan is the Correspondent of the school. Sri Barathi Vidyalaya Trust was established in Mannargudi under the relevant provisions of the Registration of Societies, 
+          Act, with the noble object of rendering various social and cultural obligations. As a first step the Trust Started a Nursery and Primary School with English as Medium of Instruction. 
+          The school was established on <strong> 2nd June 1997</strong>. Necessary orders of Recognition were obtained from the Government the same year. 
+          Sri Barathi Vidyalaya High School was started in 1998.
+        </p>
+
+        <p>
+          Classes were started simultaneously from standards VI to IX with Tamil as medium of instruction. 
+          The first set of students were presented for Government X standard Examination in 2002. 
+          Separate orders were obtained for running a parallel section in each standard with English as medium of instruction. 
+          For the last ten years the school has been functioning as a full-fledged institution offering instruction both in English and Tamil.
+        </p>
+
+      </div>
+      <div class="modern-about-image">
+        <img src="aset/fotber4.jpeg" alt="Foundation of Sri Barathi Vidyalaya">
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h4>Sri Barathi Vidyalaya School</h4>
+<p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
+        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sribarathividyalaya"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@sribarathividyalayaschoolm1642"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="gallery.html"> Gallery</a></li>
+        <li><a href="magazine.html">Magazine</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+  <h4>Contact</h4>
+
+  <p>
+    <i class="fas fa-location-dot"></i>
+    <a href="https://maps.google.com/?q=43, West, Othai St, Mannargudi-614001" target="_blank">
+      43, West, Othai St, Mannargudi-614001
+    </a>
+  </p>
+
+  <p>
+    <i class="fas fa-phone"></i>
+    <a href="tel:+919840927298">+91 9840927298</a> |
+    <a href="tel:+918678927298">8678927298</a>
+  </p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:info@sribarathividyalaya.com">
+      info@sribarathividyalaya.com | admissions@sribarathividyalaya.com
+    </a> 
+   
+  </p>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 - 2026 Sri Barathi Vidyalaya School | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-in-out"
+});
+</script>
+<script src="script.js"></script> 
+
+</body>
+</html>

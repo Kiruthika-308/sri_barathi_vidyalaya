@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Barathi Vidyalaya School</title>
+  <link rel="icon" type="image/png" href="aset/logo.png">
+  <link rel="stylesheet" href="string.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<style>
+    .recent-events {
+  padding: 60px 8%;
+  background: #f9f9f9;
+}
+
+.recent-events h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+.event-list {
+  display: grid;
+  gap: 20px;
+}
+
+.event-card {
+  display: block;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.event-card h3 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.event-card span {
+  color: #ff6600;
+  font-weight: 600;
+}
+</style>
+<body>
+    <!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+   <marquee behavior="scroll" direction="left">
+    <p>📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released</p>
+  </marquee>
+</div>
+  <!-- HEADER -->
+  <header id="mainHeader">
+    <div class="header-inner">
+      <img src="aset/logo.png" class="logo" alt="Logo Sri Barathi Vidyalaya School">
+      <!-- <div class="header-text">
+        <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
+        <span class="school-subtitle">Quality Education for a Bright Future</span>
+      </div> -->
+    </div>
+    <div class="burger" id="burgerMenu">☰</div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+
+      <div class="nav-dropdown">
+        <a href="profile.html" class="nav-drop-link">
+          About Us <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="foundation.html">Foundation</a>
+          <a href="Vision.html">Vision & Mission</a>
+        </div>
+      </div>
+
+      <a href="gallery.html">Gallery</a>
+
+      <div class="nav-dropdown">
+        <a href="#" class="nav-drop-link">
+          Events <i class="fas fa-chevron-down"></i>
+        </a>
+      
+        <div class="nav-dropdown-content">
+          <a href="Event.html">Recent Events</a>
+          
+        </div>
+      </div>
+
+      <a href="magazine.html">Magazine</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </nav>
+    
+  </header>
+<div id="overlay"></div>
+<div id="sidebar">
+
+  <div class="sidebar-header">
+    <img src="aset/logo.png" class="sidebar-logo" />
+    <span class="close-btn" id="closeSidebar">✖</span>
+  </div>
+
+  <a href="index.html">🏠 Home</a>
+
+  <div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="profile.html">ℹ️ About Us</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="foundation.html">Foundation</a>
+    <a href="Vision.html">Vision & Mission</a>
+  </div>
+
+</div>
+
+  <a href="gallery.html">🖼️ Gallery</a>
+
+  <div class="sidebar-dropdown">
+
+  <div class="sidebar-drop-link">
+    <a href="#">ℹ️ About Us</a>
+    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
+  </div>
+
+  <div class="sidebar-dropdown-content">
+    <a href="Event.html">Recent Events</a>
+    
+  </div></div>
+
+  <a href="magazine.html">📘 Magazine</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="login.html" class="login-btn">Login</a>
+
+</div>
+<!-- Event -->
+<section class="recent-events">
+  <h2>Recent Events</h2>
+  <div class="event-list" id="eventList"></div>
+</section>
+
+<!-- FOOTER -->
+  <footer class="footer">
+  <div class="footer-content">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h4>Sri Barathi Vidyalaya School</h4>
+<p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
+        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
+        
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sribarathividyalaya"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@sribarathividyalayaschoolm1642"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="gallery.html"> Gallery</a></li>
+        <li><a href="magazine.html">Magazine</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+  <h4>Contact</h4>
+
+  <p>
+    <i class="fas fa-location-dot"></i>
+    <a href="https://maps.google.com/?q=43, West, Othai St, Mannargudi-614001" target="_blank">
+      43, West, Othai St, Mannargudi-614001
+    </a>
+  </p>
+
+  <p>
+    <i class="fas fa-phone"></i>
+    <a href="tel:+919840927298">+91 9840927298</a> |
+    <a href="tel:+918678927298">8678927298</a>
+  </p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:info@sribarathividyalaya.com">
+      info@sribarathividyalaya.com | admissions@sribarathividyalaya.com
+    </a> 
+   
+  </p>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 - 2026 Sri Barathi Vidyalaya School | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+const events = [
+  {
+    title: "Annual Day Celebration 2026",
+    desc: "Celebrating talent, culture, and achievements of students.",
+    date: "May 15, 2026",
+    link: "annual-day.html"
+  },
+  {
+    title: "Sports Day 2026",
+    desc: "Annual sports competition and prize distribution ceremony.",
+    date: "March 10, 2026",
+    link: "sports-day.html"
+  },
+  {
+  title: "Teachers Day Celebration",
+  desc: "Students honored teachers with performances.",
+  date: "September 5, 2026",
+  link: "teachers-day.html"
+},
+  {
+    title: "Science Exhibition",
+    desc: "Innovative student science projects and presentations.",
+    date: "February 20, 2026",
+    link: "science-expo.html"
+  }
+];
+
+const eventList = document.getElementById("eventList");
+
+events.forEach(event => {
+  eventList.innerHTML += `
+    <a href="${event.link}" class="event-card">
+      <h3>${event.title}</h3>
+      <p>${event.desc}</p>
+      <span>${event.date} →</span>
+    </a>
+  `;
+});
+</script>
+<script src="script.js"></script> 
+</body>
+</html>
