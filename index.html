@@ -10,97 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement-bar">
-   <marquee behavior="scroll" direction="left">
-    <p>📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released</p>
-  </marquee>
-</div>
-  <!-- HEADER -->
-  <header id="mainHeader">
-    <div class="header-inner">
-      <img src="aset/logo.png" class="logo" alt="Logo Sri Barathi Vidyalaya School">
-      <!-- <div class="header-text">
-        <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
-        <span class="school-subtitle">Quality Education for a Bright Future</span>
-      </div> -->
-    </div>
-    <div class="burger" id="burgerMenu">☰</div>
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-
-      <div class="nav-dropdown">
-        <a href="profile.html" class="nav-drop-link">
-          About Us <i class="fas fa-chevron-down"></i>
-        </a>
-      
-        <div class="nav-dropdown-content">
-          <a href="Foundation.html">Foundation</a>
-          <a href="Vision.html">Vision & Mission</a>
-        </div>
-      </div>
-
-      <a href="gallery.html">Gallery</a>
-
-      <div class="nav-dropdown">
-        <a href="#" class="nav-drop-link">
-          Events <i class="fas fa-chevron-down"></i>
-        </a>
-      
-        <div class="nav-dropdown-content">
-          <a href="Event.html">Recent Events</a>
-          
-        </div>
-      </div>
-      <a href="magazine.html">Magazine</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html" class="login-btn">Login</a>
-    </nav>
-    
-  </header>
-<div id="overlay"></div>
-<div id="sidebar">
-
-  <div class="sidebar-header">
-    <img src="aset/logo.png" class="sidebar-logo" />
-    <span class="close-btn" id="closeSidebar">✖</span>
-  </div>
-
-  <a href="index.html">🏠 Home</a>
-
-  <div class="sidebar-dropdown">
-
-  <div class="sidebar-drop-link">
-    <a href="profile.html">ℹ️ About Us</a>
-    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
-  </div>
-
-  <div class="sidebar-dropdown-content">
-    <a href="Foundation.html">Foundation</a>
-    <a href="Vision.html">Vision & Mission</a>
-  </div>
-
-</div>
-
-  <a href="gallery.html">🖼️ Gallery</a>
-
-  <div class="sidebar-dropdown">
-
-  <div class="sidebar-drop-link">
-    <a href="#">ℹ️ Events</a>
-    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
-  </div>
-
-  <div class="sidebar-dropdown-content">
-    <a href="Event.html">Recent Events</a>
-    
-  </div></div>
-
-  <a href="magazine.html">📘 Magazine</a>
-  <a href="contact.html">📞 Contact</a>
-  <a href="login.html" class="login-btn">Login</a>
-
-</div>
+<div id="header"></div>
   <!-- HERO -->
   <section class="hero-section">
     <div class="carousel-container">
@@ -419,8 +329,24 @@
       <form>
         <input type="text" placeholder="Student Name" required>
         <input type="text" placeholder="Parent Name" required>
-        <input type="email" placeholder="Email ID" required>
+        <input type="text" placeholder="Class" required>
         <input type="tel" placeholder="Phone Number" required>
+
+        <!-- <select required>
+          <option value="">Select Class</option>
+          <option>LKG</option>
+          <option>UKG</option>
+          <option>1st Standard</option>
+          <option>2nd Standard</option>
+          <option>3rd Standard</option>
+          <option>4th Standard</option>
+          <option>5th Standard</option>
+          <option>6th Standard</option>
+          <option>7th Standard</option>
+          <option>8th Standard</option>
+          <option>9th Standard</option>
+          <option>10th Standard</option>
+        </select> -->
 
         <textarea placeholder="Why do you want to join this school?" required></textarea>
 
@@ -431,66 +357,7 @@
   </div>
 </div>
 
-  <footer class="footer">
-  <div class="footer-content">
-
-    <!-- About -->
-    <div class="footer-section">
-      <h4>Sri Barathi Vidyalaya School</h4>
-<p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
-        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
-        
-      <div class="social-icons">
-        <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/sribarathividyalaya"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@sribarathividyalayaschoolm1642"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html"> Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="gallery.html"> Gallery</a></li>
-        <li><a href="magazine.html">Magazine</a></li>
-        <li><a href="contact.html"> Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-section">
-  <h4>Contact</h4>
-
-  <p>
-    <i class="fas fa-location-dot"></i>
-    <a href="https://maps.google.com/?q=43, West, Othai St, Mannargudi-614001" target="_blank">
-      43, West, Othai St, Mannargudi-614001
-    </a>
-  </p>
-
-  <p>
-    <i class="fas fa-phone"></i>
-    <a href="tel:+919840927298">+91 9840927298</a> |
-    <a href="tel:+918678927298">8678927298</a>
-  </p>
-
-  <p>
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:info@sribarathividyalaya.com">
-      info@sribarathividyalaya.com | admissions@sribarathividyalaya.com
-    </a> 
-   
-  </p>
-</div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2024 - 2026 Sri Barathi Vidyalaya School | All Rights Reserved</p>
-  </div>
-</footer>
+ <div id="footer"></div>
 
   <!-- MODAL: DETAIL STAF -->
   <div class="modal" id="stafModal">
@@ -510,7 +377,9 @@
 
   <!-- SCRIPTS -->
   <script src="gtk.js"></script>
+   <script src="include.js"></script>
   <script src="script.js"></script> 
+ 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> 
   <script>
 const track = document.getElementById("carouselTrack");

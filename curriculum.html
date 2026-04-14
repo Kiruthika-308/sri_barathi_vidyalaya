@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Effective Curriculum | Sri Bharathi Vidyalaya</title>
+
+  <link rel="icon" href="aset/logo.png">
+  <link rel="stylesheet" href="string.css">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f4f7fb;
+      color:#333;
+    }
+
+    .hero{
+  position: relative;
+  background: linear-gradient(135deg, #0b3c5d, #1d6fa5, #2a9df4);
+  color: #fff;
+  text-align: center;
+  padding: 110px 20px 90px;
+  overflow: hidden;
+}
+
+/* Decorative shapes */
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background: rgba(255,255,255,0.08);
+  filter: blur(2px);
+}
+
+.hero::before{
+  top:-100px;
+  left:-100px;
+}
+
+.hero::after{
+  bottom:-120px;
+  right:-120px;
+}
+
+.hero h1{
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  animation: fadeDown 1s ease;
+}
+
+.hero p{
+  font-size: 20px;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  animation: fadeUp 1.2s ease;
+}
+
+/* Animations */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero h1{
+    font-size: 34px;
+  }
+  .hero p{
+    font-size: 16px;
+  }
+}
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .section-title h2{
+      color:#0b3c5d;
+      font-size:28px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+
+  gap:10px; /* important spacing fix */
+
+  position: relative;
+  overflow: hidden;
+}
+
+.card i{
+  font-size:30px;
+  color:#1d6fa5;
+  margin-bottom:10px;
+  display:block;
+}
+
+.card h3{
+  margin:0;
+  font-size:18px;
+  line-height:1.4;
+}
+
+.card p{
+  margin:0;
+  font-size:14px;
+  line-height:1.6;
+}
+
+    .highlight{
+      margin-top:40px;
+      padding:40px 20px;
+      background:#eaf3fb;
+      border-radius:10px;
+      text-align:center;
+    }
+
+    .highlight h2{
+      color:#0b3c5d;
+    }
+
+    .subject-box{
+      margin-top:20px;
+      padding:15px;
+      background:#fff;
+      border-left:5px solid #1d6fa5;
+      border-radius:8px;
+    }
+
+    .subject-box h4{
+      margin-bottom:5px;
+      color:#0b3c5d;
+    }
+  </style>
+</head>
+
+<body>
+<div id="header"></div>
+<!-- HERO -->
+<div class="hero" data-aos="fade-down">
+  <h1>Effective Curriculum</h1>
+  <p>Conceptual Understanding through Multimodal Learning</p>
+</div>
+
+<div class="container">
+
+  <!-- SMART CLASSROOM -->
+  <div class="section-title" data-aos="fade-up">
+    <h2>Smart Classrooms</h2>
+    <p>Technology-enabled learning for global standards</p>
+  </div>
+
+  <div class="grid">
+    <div class="card" data-aos="zoom-in">
+      <i class="fas fa-tv"></i>
+      <h3>Smart TV Enabled Classrooms</h3>
+      <p>
+        All our classrooms are equipped with state-of-the-art technology that helps in teaching and learning at pace with global standards.
+        Audio-video learning improves visualization and conceptual clarity for holistic learning.
+      </p>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <i class="fas fa-book"></i>
+      <h3>Grade-wise Activity Kits</h3>
+      <p>
+        Learning by doing is strongly encouraged. Custom grade-wise activity kits help students learn concepts through hands-on experience,
+        improving understanding and retention.
+      </p>
+    </div>
+  </div>
+
+  <!-- SUBJECT PEDAGOGY -->
+  <div class="section-title" style="margin-top:60px;" data-aos="fade-up">
+    <h2>Subject Specific Pedagogies</h2>
+    <p>We follow unique teaching methods for better conceptual understanding</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-language"></i>
+      <h3>English</h3>
+      <p>
+        English is taught as a skill, not just a subject. Every child learns at their own pace,
+        helping them improve faster—up to 1.5x compared to conventional methods.
+      </p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-square-root-variable"></i>
+      <h3>Mathematics</h3>
+      <p>
+        Math becomes simple through real-life connections. We follow the Concrete – Pictorial – Abstract approach,
+        making learning easy, engaging, and long-lasting.
+      </p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-microscope"></i>
+      <h3>EVS & Science</h3>
+      <p>
+        Students learn through exploring, experimenting, and observing. Our “Learning by Doing” approach builds independent thinkers
+        with strong conceptual understanding.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- LEARNING AT HOME -->
+  <div class="section-title" style="margin-top:60px;" data-aos="fade-up">
+    <h2>School + Home Learning</h2>
+    <p>Blending classroom learning with digital support</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" data-aos="flip-up" data-aos-delay="100">
+      <i class="fas fa-gamepad"></i>
+      <h3>Gamified Learning</h3>
+      <p>
+        Learning becomes fun with quizzes, practice tests, and interactive activities through our Student App.
+      </p>
+    </div>
+
+    <div class="card" data-aos="flip-up" data-aos-delay="200">
+      <i class="fas fa-mobile-screen"></i>
+      <h3>Student App</h3>
+      <p>
+        Students can access tests, quizzes, and learning materials anytime, ensuring continuous improvement and engagement.
+      </p>
+    </div>
+
+    <div class="card" data-aos="flip-up" data-aos-delay="300">
+      <i class="fas fa-user-check"></i>
+      <h3>Parent Monitoring</h3>
+      <p>
+        Parents can track attendance, report cards, and achievements, becoming an active part of their child’s learning journey.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FINAL HIGHLIGHT -->
+  <div class="highlight" data-aos="fade-in">
+    <h2>Our Learning Philosophy</h2>
+    <p>
+      We believe education should be interactive, meaningful, and connected to real life.
+      Our curriculum ensures academic excellence, creativity, and life skills for every child.
+    </p>
+  </div>
+
+</div>
+
+<div id="footer"></div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    once: true
+  });
+</script>
+<script src="script.js"></script>
+<script src="include.js"></script>
+</body>
+</html>

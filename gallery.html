@@ -138,92 +138,8 @@ footer{
 </head>
 
 <body>
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement-bar">
-   <marquee behavior="scroll" direction="left">
-    📢 Admissions Open for 2026–2027 | 🎉 Annual Day on May 15 | 📘 New Magazine Released
-  </marquee>
-</div>
-<header id="mainHeader">
-    <div class="header-inner">
-      <img src="aset/logo.png" class="logo" alt="Logo Sri Barathi Vidyalaya School">
-      <!-- <div class="header-text">
-        <span class="school-name">SRI BARATHI VIDYALAYA SCHOOL</span>
-        <span class="school-subtitle">Quality Education for a Bright Future</span>
-      </div> -->
-    </div>
 
-   <div class="burger" id="burgerMenu">☰</div>
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <div class="nav-dropdown">
-        <a href="profile.html" class="nav-drop-link">
-          About Us <i class="fas fa-chevron-down"></i>
-        </a>
-      
-        <div class="nav-dropdown-content">
-          <a href="Foundation.html">Foundation</a>
-          <a href="Vision.html">Vision & Mission</a>
-        </div>
-      </div>
-      <a href="gallery.html">Gallery</a>
-
-      <div class="nav-dropdown">
-        <a href="#" class="nav-drop-link">
-          Events <i class="fas fa-chevron-down"></i>
-        </a>
-      
-        <div class="nav-dropdown-content">
-          <a href="Event.html">Recent Events</a>
-          
-        </div>
-      </div>
-
-      <a href="magazine.html">Magazine</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html" class="login-btn">Login</a>
-    </nav>
-    
-  </header>
-<div id="overlay"></div>
-<div id="sidebar">
-
-  <div class="sidebar-header">
-    <img src="aset/logo.png" class="sidebar-logo" />
-    <span class="close-btn" id="closeSidebar">✖</span>
-  </div>
-
-  <a href="index.html">🏠 Home</a>
-  <div class="sidebar-dropdown">
-    <a href="profile.html" class="sidebar-drop-link" onclick="toggleSidebarDropdown()">
-      ℹ️ About Us <i class="fas fa-chevron-down"></i>
-    </a>
-  
-    <div class="sidebar-dropdown-content" id="sidebarDropdown">
-      <a href="Foundation.html">Foundation</a>
-      <a href="Vision.html">Vision & Mission</a>
-    </div>
-  </div>
-
-  <a href="gallery.html">🖼️ Gallery</a>
-
-<div class="sidebar-dropdown">
-
-  <div class="sidebar-drop-link">
-    <a href="#">ℹ️ Events</a>
-    <i class="fas fa-chevron-down" onclick="toggleDropdown(this)"></i>
-  </div>
-
-  <div class="sidebar-dropdown-content">
-    <a href="Event.html">Recent Events</a>
-    
-  </div></div>
-
-  <a href="magazine.html">📘 Magazine</a>
-  <a href="contact.html">📞 Contact</a>
-  <a href="login.html" class="login-btn">Login</a>
-
-</div>
+<div id="header"></div>
 
 <div class="gallery-container" id="gallery">
 
@@ -233,66 +149,8 @@ footer{
   <img id="modalImg" class="modal-content">
 </div>
 
-<footer class="footer">
-  <div class="footer-content">
-
-    <!-- About -->
-    <div class="footer-section">
-      <h4>Sri Barathi Vidyalaya School</h4>
-      <p>SBV School, raised on the lofty ideals of the Founder Trustee Mr.C.Krishnan & Mrs.K.Booma krishnan, is widely 
-        acknowledged as one of the leading institutions among the schools in Mannargudi located in the heart of the city.</p>
-
-      <div class="social-icons">
-        <a href="https://www.facebook.com/sbvmannargudi"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/sribarathividyalaya"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@sribarathividyalayaschoolm1642"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html"> Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="gallery.html"> Gallery</a></li>
-        <li><a href="magazine.html">Magazine</a></li>
-        <li><a href="contact.html"> Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-section">
-  <h4>Contact</h4>
-
-  <p>
-    <i class="fas fa-location-dot"></i>
-    <a href="https://maps.google.com/?q=43, West, Othai St, Mannargudi-614001" target="_blank">
-      43, West, Othai St, Mannargudi-614001
-    </a>
-  </p>
-
-  <p>
-    <i class="fas fa-phone"></i>
-    <a href="tel:+919840927298">+91 9840927298</a> |
-    <a href="tel:+918678927298">8678927298</a>
-  </p>
-
-  <p>
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:info@sribarathividyalaya.com">
-      info@sribarathividyalaya.com | admissions@sribarathividyalaya.com
-    </a> 
-   
-  </p>
-</div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2024 - 2026 Sri Barathi Vidyalaya School | All Rights Reserved</p>
-  </div>
-</footer>
+<div id="footer"></div>
+<script src="include.js"></script>
  <script src="script.js"></script> 
 <script>
 const galleryImages = [
@@ -304,32 +162,77 @@ const galleryImages = [
   {url: "aset/secondary.jpg", title: ""},
   {url: "aset/ida.jpg", title: ""},
   {url: "aset/primary-1.jpg", title: ""},
-   {url: "aset/gal2.jpg", title: ""},
+  {url: "aset/gal2.jpg", title: ""},
+  {url: "aset/ida.jpg", title: ""},
+  {url: "aset/primary-1.jpg", title: ""},
+  {url: "aset/gal2.jpg", title: ""},
+  // add more images here...
 ];
 
 const gallery = document.getElementById("gallery");
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImg");
 
-galleryImages.forEach(img => {
-  const div = document.createElement("div");
-  div.className = "gallery-item";
+let currentIndex = 0;
+const batchSize = 10;
 
-  div.innerHTML = `
-    <img src="${img.url}" alt="" loading="lazy">
-    <span>${img.title}</span>
-  `;
+// create Load More button
+// create Load More button
+const loadMoreBtn = document.createElement("button");
+loadMoreBtn.innerText = "Load More...";
+loadMoreBtn.style.cssText = `
+  display:block;
+  margin:20px auto;
+  padding:10px 20px;
+  border:none;
+  background:#0b3c5d;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+`;
 
-  const image = div.querySelector("img");
+// ✅ insert BEFORE footer
+const footer = document.getElementById("footer");
+footer.parentNode.insertBefore(loadMoreBtn, footer);
 
-  image.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImg.src = img.url;
+// function to load images
+function loadImages() {
+  const nextBatch = galleryImages.slice(currentIndex, currentIndex + batchSize);
+
+  nextBatch.forEach(img => {
+    const div = document.createElement("div");
+    div.className = "gallery-item";
+
+    div.innerHTML = `
+      <img src="${img.url}" alt="" loading="lazy">
+      <span>${img.title}</span>
+    `;
+
+    const image = div.querySelector("img");
+
+    image.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.url;
+    });
+
+    gallery.appendChild(div);
   });
 
-  gallery.appendChild(div);
-});
+  currentIndex += batchSize;
 
+  // hide button if all images loaded
+  if (currentIndex >= galleryImages.length) {
+    loadMoreBtn.style.display = "none";
+  }
+}
+
+// initial load (first 10)
+loadImages();
+
+// button click load next 10
+loadMoreBtn.addEventListener("click", loadImages);
+
+// modal close
 document.querySelector(".close-modal").onclick = () => {
   modal.style.display = "none";
 };

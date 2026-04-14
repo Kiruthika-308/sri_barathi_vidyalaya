@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Barathi Vidyalaya School</title>
+
+  <link rel="icon" href="aset/logo.png">
+  <link rel="stylesheet" href="string.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #eef3f8;
+    }
+
+.section-header {
+  text-align: center;
+  margin: 60px 0 20px;
+  position: relative;
+}
+
+/* Small tag (top text) */
+.section-header .tag {
+  display: inline-block;
+  background: rgba(29, 111, 165, 0.1);
+  color: #1d6fa5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Main Title */
+.section-header h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0b3c5d;
+  margin: 5px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitle */
+.section-header p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Stylish underline */
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #0b3c5d, #1d6fa5);
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* Soft background glow */
+.section-header::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(29,111,165,0.15), transparent 70%);
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.section-header {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px auto 40px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: none;
+      background: white;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .tab-btn.active {
+      background: #0b3c5d;
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .grid.active {
+      display: grid;
+    }
+
+    /* Flip Card Container */
+.flip-card {
+  perspective: 1100px;
+}
+
+/* Inner */
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 280px; /* increased */
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Common */
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 22px;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* FRONT SIDE */
+.flip-front {
+  background: linear-gradient(135deg, #ffffff, #f3f7fb);
+  justify-content: flex-start;
+  gap: 12px;
+  border: 1px solid #e3e8ef;
+  transition: 0.3s;
+}
+
+/* Icon */
+.flip-front i {
+  font-size: 24px;
+  color: #1d6fa5;
+}
+
+/* Title */
+.flip-front h3 {
+  color: #0b3c5d;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Text */
+.flip-front p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Hover Effect */
+.flip-card:hover .flip-front {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(29,111,165,0.25);
+}
+
+/* BACK SIDE */
+.flip-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+
+  /* Premium Gradient */
+  background: linear-gradient(135deg, #0b3c5d, #1d6fa5);
+  color: white;
+}
+
+/* Back Title */
+.flip-back h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Back Text */
+.flip-back p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #e8f1f8;
+}
+
+.flip-back ul {
+  margin-top: 10px;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.flip-back li {
+  margin-bottom: 5px;
+}
+
+/* Scrollbar (optional nice look) */
+.flip-back::-webkit-scrollbar {
+  width: 5px;
+}
+.flip-back::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
+}
+.flip-card.active .flip-inner {
+  transform: rotateY(180deg);
+}
+  </style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="section-header" data-aos="fade-up">
+  <span class="tag">Our Programs</span>
+  <h2>Learning Pathways</h2>
+  <p>Empowering students at every stage of learning</p>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('pre', this)">Pre-Primary</button>
+  <button class="tab-btn" onclick="showTab('primary', this)">Primary</button>
+  <button class="tab-btn" onclick="showTab('secondary', this)">Secondary</button>
+</div>
+
+<div class="container">
+
+  <!-- PRE PRIMARY -->
+  <div id="pre" class="grid active">
+
+    <!-- Development -->
+    <div class="flip-card" data-aos="fade-up">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <i class="fas fa-child"></i>
+          <h3>Developmentally Appropriate</h3>
+          <p>
+Children grow and develop uniquely across intellectual, physical, emotional, and social areas.
+</p>
+        </div>
+        <div class="flip-back">
+          <h3>Developmentally Appropriate</h3>
+          <p>
+            Our approach is based on the principle that children develop as individuals, across and within the developmental areas of their lives (intellect, physical, emotional and social), and across all developmental stages. It also recognizes that every child is intelligent and able to learn, and that each child develops across and within each developmental area in a unique and individual way.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative -->
+    <div class="flip-card" data-aos="fade-up">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <i class="fas fa-palette"></i>
+          <h3>Creative</h3>
+          <p>
+Encouraging imagination through engaging activities, music, movement, and creative expression.
+</p></div>
+        <div class="flip-back">
+          <h3>Creative</h3>
+          <p>
+            
+            Creative learning is the process of engaging learners in a way that encourages, and celebrates their creative expression across all learning domains. Children are exposed to exciting learning environments, challenging and open-ended questions and choices in activities, as well as engaging with their peers and teachers. They are exposed to colours and textures, music and movement, and a wide range of other media with plenty of freedom to help nurture the creativity within each child.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integrated -->
+    <div class="flip-card" data-aos="fade-up">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <i class="fas fa-layer-group"></i>
+          <h3>Integrated</h3>
+<p>
+Connecting learning with real-life experiences while developing concepts, skills, and attitudes.
+</p>        </div>
+        <div class="flip-back">
+          <h3>Integrated</h3>
+          <p>
+            
+            Our curriculum is theme based and explores ideas from multiple points of view. Our themes bring together different domains of learning and act as catalysts for the development of concepts, skills, and attitudes while connecting this learning with real life. Because children learn differently and learn better when learning experiences are interrelated or interrelated, our curriculum is appropriate for them. This learning guarantees the development of multiple intelligences in children.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Happy -->
+    <div class="flip-card" data-aos="fade-up">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <i class="fas fa-smile"></i>
+          <h3>Happy Learning Spaces</h3>
+<p>
+A joyful and safe environment designed to inspire creativity, exploration, and life skills.
+</p>        </div>
+        <div class="flip-back">
+          <h3>Happy Learning Spaces</h3>
+          <p>
+            
+            The Learning Environment is joyful, stimulating and designed with children’s needs in mind. Furniture is comfortable and safe, classroom spaces are aesthetically pleasing, clutter-free and well-structured, materials and resources are open and non-threatening, learning is made visible through displays and the entire environment is child-friendly. The curriculum is designed to help children develop their creativity and build life skills to help them make good decisions and live meaningful lives. Creativity is fostered through a wide range of activities and expressions, including creative art, performing art, scientific discovery, life skills development, outbound exploration and education.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Care -->
+    <div class="flip-card" data-aos="fade-up">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <i class="fas fa-heart"></i>
+          <h3>Care & Values</h3>
+<p>
+Building independence, cooperation, and responsibility through everyday learning experiences.
+</p>        </div>
+        <div class="flip-back">
+          <h3>Care</h3>
+          <p>
+            
+            Self-care begins with self-help skills that help children understand and thrive in the knowledge that they are unique and special. Self-help skills include choices, independence, challenges, affirmations of success and support. Cooperation is a key part of self-care. Children learn to share, wait for their turn, take on the role of others and work together to resolve conflicts. Environment is an integral part of the curriculum. Children are taught to care for the environment from an early age.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="primary" class="grid">
+
+  <div class="flip-card" data-aos="fade-up">
+    <div class="flip-inner">
+
+      <!-- FRONT -->
+      <div class="flip-front">
+        <i class="fas fa-book-open"></i>
+        <h3>Primary Programme</h3>
+        <p>
+          A structured programme focused on inquiry-based learning, creativity, and skill development.
+        </p>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-back">
+        <h3>Primary Programme</h3>
+        <p>
+          Our Primary Years Programme is designed to meet the evolving needs of learners through a balanced and structured approach. It integrates concepts, processes, and modes of thinking from a wide range of subject areas.
+        </p>
+
+        <p>
+          The curriculum encourages inquiry-based learning, creative engagement, and is built on research about how children learn best. It is developmentally appropriate and guided by the principles of Multiple Intelligences and the National Curriculum Framework.
+        </p>
+
+        <p>
+          We focus on developing essential skills such as reading, writing, listening, speaking, communication, problem-solving, collaboration, leadership, and critical thinking.
+        </p>
+
+        <ul>
+          <li>Reading & Writing Skills</li>
+          <li>Public Speaking & Communication</li>
+          <li>Grammar & Vocabulary</li>
+          <li>Scientific Inquiry</li>
+          <li>Numerical & Logical Thinking</li>
+          <li>Creative Expression & Art</li>
+          <li>Physical & Social Development</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div id="secondary" class="grid">
+
+  <div class="flip-card" data-aos="fade-up">
+    <div class="flip-inner">
+
+      <!-- FRONT -->
+      <div class="flip-front">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Secondary Programme</h3>
+        <p>
+          Moving beyond rote learning to real-world understanding, critical thinking, and academic excellence.
+        </p>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-back">
+        <h3>Secondary Programme</h3>
+
+        <p>
+          Our Secondary Programme is designed to move students beyond rote learning and textbook-based knowledge. We encourage them to explore concepts deeply and build meaningful connections with real-life situations.
+        </p>
+
+        <p>
+          The focus is on academic excellence, critical thinking, and preparing students for future challenges through structured and innovative learning approaches.
+        </p>
+
+        <ul>
+          <li>Cross-Curricular Learning Approach</li>
+          <li>Differentiated Instruction</li>
+          <li>Research-Based Projects</li>
+          <li>IIT & NEET Foundation Classes</li>
+          <li>Strong Communicative Language Skills</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+function showTab(id, btn) {
+  document.querySelectorAll(".grid").forEach(g => g.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  btn.classList.add("active");
+}
+</script>
+<script>
+document.querySelectorAll(".flip-card").forEach(card => {
+  card.addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+});
+</script>
+<script src="script.js"></script>
+<script src="include.js"></script>
+
+</body>
+</html>

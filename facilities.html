@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilities | Sri Bharathi Vidyalaya</title>
+<link rel="stylesheet" href="string.css">
+  
+<link rel="icon" type="image/png" href="aset/logo.png">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+}
+.hero{
+  position: relative;
+  background: linear-gradient(135deg, #0b3c5d, #1d6fa5, #2a9df4);
+  color: #fff;
+  text-align: center;
+  padding: 110px 20px 90px;
+  overflow: hidden;
+}
+
+/* Decorative shapes */
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background: rgba(255,255,255,0.08);
+  filter: blur(2px);
+}
+
+.hero::before{
+  top:-100px;
+  left:-100px;
+}
+
+.hero::after{
+  bottom:-120px;
+  right:-120px;
+}
+
+.hero h1{
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  animation: fadeDown 1s ease;
+}
+
+.hero p{
+  font-size: 20px;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  animation: fadeUp 1.2s ease;
+}
+/* SECTION */
+.section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 10%;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img, .text {
+  flex: 1;
+}
+
+.text h2 {
+  color: #0b3c5d;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.text p {
+  color: #555;
+  line-height: 1.7;
+}
+
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .section,
+  .section.reverse {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero" data-aos="fade-up">
+  <h1 data-aos="fade-up">Our Facilities</h1>
+  <p data-aos="fade-up" data-aos-delay="150">
+    Building future-ready learners with world-class infrastructure
+  </p>
+</section>
+
+<!-- SECTION 1 -->
+<section class="section">
+  <div class="img" data-aos="fade-right">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-left">
+    <h2>Smart Classrooms</h2>
+<p>
+Learning today is interactive, visual, and student-centered rather than one-way teaching. 
+At Sri Bharathi Vidyalaya, every classroom is equipped with Smart TVs, interactive boards, 
+and advanced audio-visual systems.
+</p>
+
+<p>
+Teachers use preloaded digital lessons, animations, and real-time examples to simplify 
+complex concepts. Students actively participate through questions, discussions, and 
+visual learning methods that improve understanding and retention.
+</p>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="section reverse">
+  <div class="img" data-aos="fade-left">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-right">
+    <h2>Theme Based Learning</h2>
+<p>
+Our curriculum follows a theme-based approach that connects different subjects to real-life situations. 
+Instead of memorizing facts, students understand concepts through meaningful context.
+</p>
+
+<p>
+This method enhances critical thinking, creativity, and problem-solving abilities. 
+Students learn to compare ideas, evaluate situations, and apply knowledge in practical scenarios, 
+making learning more meaningful and long-lasting.
+</p>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="section">
+  <div class="img" data-aos="fade-right">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-left">
+    <h2>QR Enabled Learning</h2>
+<p>
+Our textbooks are integrated with QR codes that connect students to digital learning resources. 
+By simply scanning, students can access videos, animations, and expert explanations.
+</p>
+
+<p>
+This blended learning approach strengthens concept clarity and allows students to learn at their own pace 
+anytime, anywhere, making education more flexible and engaging.
+</p>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section class="section reverse">
+  <div class="img" data-aos="fade-left">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-right">
+    <h2>Multimodal Learning Environment</h2>
+<p>
+We use multiple learning formats such as visuals, audio, videos, and interactive smart boards 
+to cater to different learning styles of students.
+</p>
+
+<p>
+This ensures better understanding, improved attention span, and higher academic performance 
+by engaging students through various sensory learning methods.
+</p>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section class="section">
+  <div class="img" data-aos="fade-right">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-left">
+    <h2>Art Integrated Learning</h2>
+<p>
+At SBV, we believe creativity is an essential life skill. Our art-integrated curriculum 
+combines academics with creative expression through drawing, craft, storytelling, and digital art.
+</p>
+
+<p>
+This approach helps students develop imagination, emotional intelligence, and innovative thinking 
+while strengthening academic understanding.
+</p>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+<section class="section reverse">
+  <div class="img" data-aos="fade-left">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-right">
+    <h2>Foundation Classes (IIT-JEE / Competitive Exams)</h2>
+<p>
+We provide structured foundation programs for students from early grades to prepare them for 
+competitive exams like IIT-JEE and NEET.
+</p>
+
+<p>
+The program focuses on strengthening core concepts in Mathematics, Physics, Chemistry, and Biology, 
+ensuring students build strong academic fundamentals from an early stage.
+</p>
+
+<p>
+Key Benefits:
+<ul>
+  <li>Strong conceptual clarity</li>
+  <li>Early exposure to exam patterns</li>
+  <li>Improved problem-solving skills</li>
+  <li>Better time management</li>
+  <li>Reduced exam pressure</li>
+</ul>
+</p>
+  </div>
+</section>
+
+<!-- SECTION 7 -->
+<section class="section">
+  <div class="img" data-aos="fade-right">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-left">
+    <h2>Sports & Physical Development</h2>
+<p>
+We strongly believe that education is incomplete without sports. Our school provides 
+extensive indoor and outdoor sports facilities guided by trained coaches.
+</p>
+
+<p>
+Students participate in games like cricket, football, athletics, and indoor activities 
+that promote teamwork, discipline, leadership, and physical fitness.
+</p>
+  </div>
+</section>
+
+<!-- SECTION 8 -->
+<section class="section reverse">
+  <div class="img" data-aos="fade-left">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-right">
+    <h2>Safety & Security</h2>
+<p>
+Student safety is our top priority. The entire campus is monitored with CCTV surveillance 
+and supported by trained security personnel.
+</p>
+
+<p>
+Fire safety systems, emergency protocols, and secure campus entry ensure a safe and 
+protected environment for every child.
+</p>
+  </div>
+</section>
+
+<!-- SECTION 9 -->
+<section class="section">
+  <div class="img" data-aos="fade-right">
+    <img src="aset/fotber1.jpeg">
+  </div>
+  <div class="text" data-aos="fade-left">
+    <h2>Transport Facility</h2>
+<p>
+We provide a safe, reliable, and well-organized transport system covering all major 
+areas around the city and outskirts.
+</p>
+
+<p>
+All buses are operated by experienced drivers and supported by attendants to ensure 
+student safety and punctuality.
+</p>
+
+<p>
+Parents can trust our transport system for:
+<ul>
+  <li>Timely pickup and drop</li>
+  <li>Safe travel environment</li>
+  <li>GPS-enabled tracking (if added later)</li>
+  <li>Trained staff supervision</li>
+</ul>
+</p>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="include.js"></script>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120
+  });
+</script>
+
+</body>
+</html>

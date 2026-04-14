@@ -1,77 +1,6 @@
 // ========================================
 // MA1N.HTML - JAVASCRIPT INTERAKSI
 // ========================================
-const header = document.getElementById("mainHeader");
-//sidebar 
-document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.getElementById("burgerMenu");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
-  const closeBtn = document.getElementById("closeSidebar"); // optional
-  const header = document.getElementById("mainHeader");
-  // Safety check
-  if (!burger || !sidebar || !overlay) return;
-    header.style.transform = "translateY(0)";
-
-  // Open/Close toggle
-  const toggleMenu = () => {
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-    burger.classList.toggle("active");
-
-    const isOpen = burger.classList.contains("active");
-
-    burger.textContent = isOpen ? "✖" : "☰";
-    document.body.classList.toggle("no-scroll", isOpen);
-  };
-
-  burger.addEventListener("click", toggleMenu);
-
-  // Close function
-  const closeMenu = () => {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-    burger.classList.remove("active");
-    burger.textContent = "☰";
-    document.body.classList.remove("no-scroll");
-
-    header.style.transform = "translateY(0)";
-  };
-
-  overlay.addEventListener("click", closeMenu);
-
-  // Close when clicking links
-  document.querySelectorAll("#sidebar a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  // Optional: close button inside sidebar
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeMenu);
-  }
-  
-});
-
-// function toggleSidebarDropdown(){
-//   const dropdown = document.getElementById("sidebarDropdown");
-
-//   if(dropdown.style.display === "block"){
-//     dropdown.style.display = "none";
-//   } else {
-//     dropdown.style.display = "block";
-//   }
-// }
-function toggleDropdown(icon) {
-  const menu = icon.parentElement.nextElementSibling;
-
-  document.querySelectorAll(".sidebar-dropdown-content").forEach(item => {
-    if (item !== menu) {
-      item.classList.remove("show");
-    }
-  });
-
-  menu.classList.toggle("show");
-}
 
 const images = document.querySelectorAll(".carousel img");
 const next = document.querySelector(".next");
@@ -84,22 +13,22 @@ function showImage(i){
   images[i].classList.add("active");
 }
 
-next.addEventListener("click", () => {
-  index = (index + 1) % images.length;
-  showImage(index);
-});
+if (next && prev && images.length > 0) {
+  next.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  });
 
-prev.addEventListener("click", () => {
-  index = (index - 1 + images.length) % images.length;
-  showImage(index);
-});
+  prev.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  });
 
-/* Auto slide */
-setInterval(() => {
-  index = (index + 1) % images.length;
-  showImage(index);
-}, 3000);
-
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }, 3000);
+}
 // modal
 function openEnquiryModal(){
   document.getElementById("enquiryModal").style.display = "flex";
@@ -397,18 +326,18 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('✅ Script initialized - ma1n.html loaded');
 });
 
-document.addEventListener('click', (e) => {
-  if (!header.contains(e.target)) {
-    navMenu.classList.remove('active');
-    document.body.classList.remove('nav-open');
-  }
-});
+// document.addEventListener('click', (e) => {
+//   if (!header.contains(e.target)) {
+//     navMenu.classList.remove('active');
+//     document.body.classList.remove('nav-open');
+//   }
+// });
 
-burgerMenu.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    navMenu.classList.toggle('active');
-  }
-});
+// burgerMenu.addEventListener('keydown', (e) => {
+//   if (e.key === 'Enter') {
+//     navMenu.classList.toggle('active');
+//   }
+// });
 
 
 
